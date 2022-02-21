@@ -1,5 +1,6 @@
 package application;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import models.entities.Account;
@@ -26,9 +27,16 @@ public class Application {
 		Double withdraw = scan.nextDouble();
 		account.withdraw(withdraw);
 		System.out.println("New balance: " + account.getBalance() );
+		}
 		catch(DomainException e) {
 			System.out.println("Withdraw error: " + e.getMessage());
 		}
+		catch(InputMismatchException e) {
+			System.out.println("Input error: " + e);
+		}
 		scan.close();
-	}
+	
+
+}
+		
 }

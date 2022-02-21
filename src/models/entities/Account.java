@@ -23,7 +23,7 @@ public class Account {
 
 
 	public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
-		super();
+		
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;
